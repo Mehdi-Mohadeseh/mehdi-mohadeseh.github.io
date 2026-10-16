@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta property="og:title" content="دعوت‌نامه‌ی عروسی مهدی و محدثه">
 <meta property="og:description" content="پنجشنبه ۳۰ مهر ۱۴۰۵، ساعت ۱۹، هتل سایه‌بان کویر">
-<meta property="og:image" content="couple.jpg">
 <style>html,body{margin:0}img{max-width:100%}[hidden]{display:none!important}:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}</style>
 <title>مهدی و محدثه</title>
 <meta name="claude:viewport-fit-sides" content="cover">
@@ -89,13 +88,13 @@ body.locked{overflow:hidden}
 @keyframes spin{to{transform:rotate(360deg)}}
 
 /* ---------- fixed photo ---------- */
-.photo{position:fixed;inset:0;z-index:0;overflow:hidden}
+.photo{position:fixed;top:0;left:0;right:0;height:100vh;height:100lvh;z-index:0;overflow:hidden;transform:translateZ(0);-webkit-backface-visibility:hidden;backface-visibility:hidden;pointer-events:none}
 .photo img{width:100%;height:100%;object-fit:cover;object-position:50% 18%;transform:scale(1.1);transition:transform 10s ease-out}
 .photo::after{content:"";position:absolute;inset:0;background:rgba(10,6,8,.85);transition:background 3.6s ease}
 body.opened .photo img{transform:scale(1)}
 body.opened .photo::after{background:linear-gradient(to bottom,rgba(22,15,19,.38),rgba(22,15,19,.5) 45%,rgba(22,15,19,.7))}
 body.scrolled .photo::after{background:var(--veil)}
-.vline{position:fixed;z-index:2;top:14%;bottom:14%;right:calc(18px + env(safe-area-inset-right,0px));width:1px;background:rgba(255,255,255,.75);transform:scaleY(0);transform-origin:top;transition:transform 1.6s ease 1s}
+.vline{position:fixed;z-index:2;top:14vh;top:14svh;height:72vh;height:72svh;right:calc(18px + env(safe-area-inset-right,0px));width:1px;background:rgba(255,255,255,.75);transform:scaleY(0);transform-origin:top;transition:transform 1.6s ease 1s}
 body.opened .vline{transform:scaleY(1)}
 
 /* ---------- content ---------- */
