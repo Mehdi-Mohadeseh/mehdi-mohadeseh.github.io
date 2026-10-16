@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="fa">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta property="og:title" content="دعوت‌نامه‌ی عروسی مهدی و محدثه">
+<meta property="og:description" content="پنجشنبه ۳۰ مهر ۱۴۰۵، ساعت ۱۹، هتل سایه‌بان کویر">
+<meta property="og:image" content="couple.jpg">
+<style>html,body{margin:0}img{max-width:100%}[hidden]{display:none!important}:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}</style>
+<title>مهدی و محدثه</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Pinyon+Script&family=Noto+Nastaliq+Urdu:wght@500;700&family=Vazirmatn:wght@300;400;500;600&family=Amiri:wght@400;700&display=swap">
+<style>
+/* Layout: embossed lace envelope with wax seal (English) opens softly onto a fixed full-screen photo; Persian details scroll over it on glass. One deliberate dark-over-photo look. */
+:root{
+  --env-bg:#C4A5AB;
+  --wax-ink:#6A4249;
+  --white:#FFFFFF;
+  --veil:rgba(22,15,19,.58);
+  --glass:rgba(255,255,255,.13);
+  --glass-line:rgba(255,255,255,.28);
+  --nast:'Noto Nastaliq Urdu','Vazirmatn',serif;
+  --body:'Vazirmatn',Tahoma,sans-serif;
+  --serif:'Cormorant Garamond',Georgia,serif;
+  --formal:'Amiri','Noto Naskh Arabic','Vazirmatn',serif;
+  --script:'Pinyon Script','Cormorant Garamond',cursive;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{background:#1c1418;color:var(--white);font-family:var(--body);font-size:15px;line-height:2;text-align:center;overflow-x:hidden}
+body.locked{overflow:hidden}
+
+/* ---------- envelope ---------- */
+.env{position:fixed;inset:0;z-index:50;overflow:hidden;background:transparent;cursor:pointer}
+.stage{position:absolute;left:50%;top:50%;width:1280px;height:1920px;transform-origin:0 0;perspective:2600px}
+.stage>*{position:absolute;inset:0}
+.stage img.layer{width:100%;height:100%;display:block;object-fit:cover}
+.liner{transition:transform 3s cubic-bezier(.3,0,.2,1)}
+.env.open .liner{transform:scale(1.04)}
+.door{overflow:hidden;transition:transform 4.2s cubic-bezier(.37,0,.25,1),filter 4.2s ease,opacity 1.6s ease 2.8s;backface-visibility:hidden;-webkit-backface-visibility:hidden}
+.door img{position:absolute;top:0;width:1280px;height:1920px;max-width:none}
+.door.l{right:calc(50% - 2px);transform-origin:0 50%}
+.door.l img{left:0}
+.door.r{left:calc(50% - 2px);transform-origin:100% 50%}
+.door.r img{right:0}
+.env.open .door.l{transform:rotateY(86deg);filter:brightness(.75);opacity:0}
+.env.open .door.r{transform:rotateY(-86deg);filter:brightness(.75);opacity:0}
+.tflap{transform-origin:50% 0;transition:transform 4.2s cubic-bezier(.37,0,.25,1),opacity 1.8s ease 2.4s,filter 4.2s ease;backface-visibility:hidden;-webkit-backface-visibility:hidden}
+.tflap img{width:100%;height:100%;display:block}
+.env.open .tflap{transform:translateY(-3%) rotateX(-72deg);filter:brightness(.82);opacity:0}
+.depth{pointer-events:none;opacity:0;transition:opacity 2s ease;background:radial-gradient(70% 45% at 50% 58%,rgba(0,0,0,0),rgba(60,30,40,.28))}
+.env.open .depth{opacity:1}
+.veil{background:#140c10;opacity:0;pointer-events:none;transition:opacity 1.4s ease}
+.env.dark .veil{opacity:1}
+.env.gone{opacity:0;transition:opacity .9s ease}
+
+.sparkles{opacity:0;transition:opacity 1.2s ease;pointer-events:none}
+.env.shine .sparkles{opacity:1}
+.sparkles i{position:absolute;width:7px;height:7px;border-radius:50%;background:#fff;box-shadow:0 0 12px 4px rgba(255,240,244,.85);animation:twinkle 2.4s ease-in-out infinite}
+@keyframes twinkle{0%,100%{opacity:0;transform:scale(.3)}50%{opacity:1;transform:scale(1)}}
+
+.seal{position:absolute;left:34.3%;top:37.97%;width:33.67%;aspect-ratio:431/440;border:0;padding:0;background:none;cursor:pointer;z-index:5;animation:hint 2.8s ease-in-out infinite}
+.seal:focus-visible{outline:4px solid #5B4660;outline-offset:8px;border-radius:50%}
+.half{position:absolute;inset:0;transition:transform .35s ease-out}
+.half img{width:100%;height:100%;display:block}
+.h1{clip-path:polygon(0 0,76% 0,73% 13%,62% 30%,54% 46%,45% 62%,34% 84%,30% 100%,0 100%)}
+.h2{clip-path:polygon(76% 0,100% 0,100% 100%,30% 100%,34% 84%,45% 62%,54% 46%,62% 30%,73% 13%)}
+.crackline{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.crackline polyline{stroke-dasharray:120;stroke-dashoffset:120;transition:stroke-dashoffset .9s cubic-bezier(.6,0,.4,1)}
+.env.crack .seal{animation:none}
+.env.crack .crackline polyline{stroke-dashoffset:0}
+.env.split .crackline{opacity:0;transition:opacity .2s}
+.env.split .h1{transform:translate(-1.2%,.6%) rotate(-1.5deg)}
+.env.split .h2{transform:translate(1.2%,1%) rotate(1.5deg)}
+.env.fall .half{transition:transform 1.6s cubic-bezier(.5,.05,.65,.25),opacity .6s ease 1s}
+.env.fall .h1{transform:translate(-22%,120%) rotate(-28deg) scale(.82);opacity:0}
+.env.fall .h2{transform:translate(20%,130%) rotate(24deg) scale(.82);opacity:0}
+@keyframes hint{0%,100%{transform:scale(1)}50%{transform:scale(1.035)}}
+
+/* ---------- music ---------- */
+.music{position:fixed;z-index:60;top:calc(12px + env(safe-area-inset-top,0px));left:calc(12px + env(safe-area-inset-left,0px));width:44px;height:44px;border-radius:50%;border:1px solid var(--glass-line);background:rgba(30,22,26,.35);color:var(--white);display:flex;align-items:center;justify-content:center;cursor:pointer;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.music:focus-visible{outline:2px solid var(--white);outline-offset:2px}
+.music .off{display:none}
+.music.muted .on{display:none}.music.muted .off{display:block}
+.music:not(.muted) svg.on{animation:spin 6s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* ---------- fixed photo ---------- */
+.photo{position:fixed;inset:0;z-index:0;overflow:hidden}
+.photo img{width:100%;height:100%;object-fit:cover;object-position:50% 18%;transform:scale(1.1);transition:transform 10s ease-out}
+.photo::after{content:"";position:absolute;inset:0;background:rgba(10,6,8,.85);transition:background 3.6s ease}
+body.opened .photo img{transform:scale(1)}
+body.opened .photo::after{background:linear-gradient(to bottom,rgba(22,15,19,.38),rgba(22,15,19,.5) 45%,rgba(22,15,19,.7))}
+body.scrolled .photo::after{background:var(--veil)}
+.vline{position:fixed;z-index:2;top:14%;bottom:14%;right:calc(18px + env(safe-area-inset-right,0px));width:1px;background:rgba(255,255,255,.75);transform:scaleY(0);transform-origin:top;transition:transform 1.6s ease 1s}
+body.opened .vline{transform:scaleY(1)}
+
+/* ---------- content ---------- */
+.content{position:relative;z-index:1;text-shadow:0 1px 12px rgba(0,0,0,.45)}
+.hero{min-height:100svh;display:flex;align-items:flex-end;justify-content:center;padding-block:40px 18svh;padding-left:max(24px,env(safe-area-inset-left,0px));padding-right:max(44px,env(safe-area-inset-right,0px));direction:ltr}
+.hero{position:relative;cursor:pointer}
+.next{position:absolute;left:0;right:0;bottom:calc(22px + env(safe-area-inset-bottom,0px));display:flex;justify-content:center;opacity:.85}
+.next svg{animation:bob 1.8s ease-in-out infinite}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(7px)}}
+.fa .rv{cursor:pointer}
+.hero-in{display:flex;align-items:center;justify-content:space-between;gap:12px;width:100%;max-width:420px}
+.en-names{font-family:var(--script);font-size:clamp(40px,12vw,62px);line-height:1.05;text-align:left;margin:0;font-weight:400}
+.en-names span{display:block}
+.en-names span+span{padding-left:.8em}
+.en-date{flex:none;font-family:var(--serif);font-weight:500;font-size:clamp(28px,8.2vw,40px);line-height:1;display:flex;flex-direction:column;align-items:center;gap:6px}
+.en-date i{font-style:normal;font-size:.4em;opacity:.85}
+
+.fa{direction:rtl;display:flex;flex-direction:column;align-items:center;gap:30px;padding-block:20px 80px;padding-left:max(24px,env(safe-area-inset-left,0px));padding-right:max(40px,env(safe-area-inset-right,0px))}
+.blk{width:100%;max-width:400px;display:flex;flex-direction:column;align-items:center;gap:4px}
+.god{font-family:var(--serif);font-size:12px;letter-spacing:3px;direction:ltr;opacity:.9}
+.fa-names{font-family:var(--nast);font-weight:700;font-size:clamp(36px,10vw,46px);line-height:2;margin:0;display:flex;align-items:center;gap:10px}
+.fa-names small{font-size:.5em;font-weight:500}
+.heart{width:.32em;height:.32em;flex:none}
+.couplet{font-family:var(--nast);font-size:17px;line-height:2.6;margin:0;font-weight:500}
+.poem{margin:0;font-family:var(--formal);font-size:19px;font-weight:400;line-height:2.15;white-space:pre-line;max-width:36ch}
+.poem strong{font-weight:700}
+.date{font-family:var(--formal);font-size:30px;font-weight:700;line-height:1.6;display:flex;align-items:center;gap:10px;font-variant-numeric:tabular-nums;direction:ltr}
+.date .heart{width:14px;height:14px}
+.when{font-family:var(--formal);font-size:19px;font-weight:400}
+.venue{font-family:var(--formal);font-size:23px;font-weight:700}
+.addr{font-family:var(--formal);font-size:16px;font-weight:400;margin:0;opacity:.95}
+.route{display:inline-flex;align-items:center;gap:8px;margin-top:10px;min-height:44px;padding:9px 22px;border:1px solid var(--glass-line);border-radius:14px;color:var(--white);text-decoration:none;font-weight:500;font-size:14px;background:var(--glass);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.route:focus-visible{outline:2px solid var(--white);outline-offset:3px}
+.route:hover{background:rgba(255,255,255,.22)}
+.count{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;width:100%;max-width:330px}
+.count div{display:flex;flex-direction:column;align-items:center;padding:8px 0 4px;border-radius:14px;background:var(--glass);border:1px solid var(--glass-line);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.count b{font-size:22px;font-weight:500;line-height:1.4;font-variant-numeric:tabular-nums}
+.count small{font-size:11px;opacity:.85}
+.qr{display:flex;flex-direction:column;align-items:center;gap:6px;color:var(--white);text-decoration:none;font-size:13px}
+.qr span{background:var(--white);padding:9px;border-radius:12px;display:flex}
+.qr img{width:104px;height:104px;display:block}
+.qr:focus-visible{outline:2px solid var(--white);outline-offset:3px}
+.wait{font-family:var(--nast);font-size:30px;font-weight:700;line-height:2.2;margin:0}
+
+/* entrance */
+.rv{transition:opacity 1.2s ease,transform 1.2s cubic-bezier(.2,.7,.2,1),filter 1.2s ease}
+body.staging .rv{opacity:0;transform:translateY(16px);filter:blur(6px)}
+body.staging .rv.in{opacity:1;transform:none;filter:none}
+
+@media (prefers-reduced-motion:reduce){
+  .door,.tflap,.liner,.half,.photo img,.photo::after,.vline,.rv,.env.gone{transition:none}
+  .seal,.music svg.on,.sparkles i{animation:none}
+  body.staging .rv{opacity:1;transform:none;filter:none}
+}
+</style>
+</head>
+<body>
+
+
+<div class="env" id="env" role="dialog" aria-label="Wedding invitation">
+  <div class="stage" id="stage">
+    <div class="door l"><img src="pocket.webp" alt=""></div>
+    <div class="door r"><img src="pocket.webp" alt=""></div>
+    <div class="tflap"><img src="flap_top.webp" alt=""></div>
+    <button class="seal" id="seal" type="button" aria-label="Open the invitation">
+      <div class="half h1"><img src="seal.webp" alt=""></div>
+      <div class="half h2"><img src="seal.webp" alt=""></div>
+      <svg class="crackline" viewBox="0 0 100 100" aria-hidden="true"><polyline points="75,4 73,13 62,30 54,46 45,62 34,84 31,96" fill="none" stroke="#4A2E33" stroke-width="1" stroke-linejoin="round"/></svg>
+    </button>
+  </div>
+</div>
+
+<button class="music muted" id="musicBtn" type="button" aria-label="Music on or off">
+  <svg class="on" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+  <svg class="off" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/><path d="M3 3l18 18"/></svg>
+</button>
+<audio id="bgm" src="music.mp3" loop preload="auto"></audio>
+
+<div class="photo" aria-hidden="true"><img src="couple.jpg" alt=""></div>
+<div class="vline" aria-hidden="true"></div>
+
+<div class="content">
+  <header class="hero">
+    <div class="hero-in">
+      <h1 class="en-names rv"><span>Mahdi</span><span>Mohadeseh</span></h1>
+      <div class="en-date rv" aria-label="2026 / 10 / 22"><span>2026</span><i>●</i><span>10</span><i>●</i><span>22</span></div>
+    </div>
+    <div class="next rv" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></div>
+  </header>
+
+  <main class="fa">
+    <div class="blk rv">
+      <h2 class="fa-names">
+        <svg class="heart" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z" fill="none" stroke="#fff" stroke-width="1.6"/></svg>
+        مهدی <small>و</small> محدثه
+        <svg class="heart" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z" fill="none" stroke="#fff" stroke-width="1.6"/></svg>
+      </h2>
+    </div>
+
+    <p class="couplet rv">یار با ماست چه حاجت که زیادت طلبیم<br>دولت صحبت آن مونس جان ما را بس</p>
+
+    <p class="poem rv">از میان تمام اتفاق‌های جهان،
+چه زیباست سهم هم شدن!
+حالا من و تو مانده‌ایم
+و قصه‌ای که قرار است
+تا همیشه ادامه داشته باشد.
+
+با عشق، با امید،
+و با آرزوی هزاران روز کنار هم بودن،
+شما را به جشن آغاز قصه‌مان دعوت می‌کنیم.
+
+<strong>بودنتان، قشنگ‌ترین هدیه‌ی این شب است.</strong></p>
+
+    <div class="blk rv">
+      <div class="date">
+        <svg class="heart" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z" fill="none" stroke="#fff" stroke-width="1.8"/></svg>
+        <span>۱۴۰۵ / ۷ / ۳۰</span>
+        <svg class="heart" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z" fill="none" stroke="#fff" stroke-width="1.8"/></svg>
+      </div>
+      <div class="when">پنجشنبه، ساعت ۱۹</div>
+    </div>
+
+    <div class="blk rv">
+      <div class="venue">هتل سایه‌بان کویر</div>
+      <p class="addr">اردستان، بلوار معلم، بعد از بلوار ولیعصر</p>
+      <a class="route" href="https://nshn.ir/23_bSjPnyFZRQz">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+        مسیریابی با نشان
+      </a>
+    </div>
+
+    <div class="count rv" aria-label="شمارش معکوس تا مراسم">
+      <div><b id="cd-d">۰</b><small>روز</small></div>
+      <div><b id="cd-h">۰</b><small>ساعت</small></div>
+      <div><b id="cd-m">۰</b><small>دقیقه</small></div>
+      <div><b id="cd-s">۰</b><small>ثانیه</small></div>
+    </div>
+
+    <a class="qr rv" href="https://nshn.ir/23_bSjPnyFZRQz"><span><img src="qr.svg" alt="QR کد آدرس هتل سایه‌بان کویر"></span>آدرس</a>
+
+    <p class="wait rv">منتظرتون هستیم</p>
+  </main>
+</div>
+
+<script>
+(function(){
+  var body=document.body, env=document.getElementById('env'), stage=document.getElementById('stage');
+  var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* fit the 1280x1920 envelope to cover the screen */
+  function fit(){
+    var s=Math.max(innerWidth/1280, innerHeight/1920);
+    stage.style.transform='scale('+s+') translate(-50%,-50%)';
+  }
+  fit(); addEventListener('resize',fit);
+
+  /* music: try on load, otherwise on the first touch */
+  var audio=document.getElementById('bgm'), mBtn=document.getElementById('musicBtn'), userPaused=false;
+  audio.volume=.85;
+  function play(){try{var p=audio.play();if(p&&p.then)p.then(function(){mBtn.classList.remove('muted');}).catch(function(){});}catch(e){}}
+  play();
+  ['pointerdown','touchstart','keydown','wheel','scroll','click'].forEach(function(ev){addEventListener(ev,function(){if(audio.paused&&!userPaused)play();},{passive:true,capture:true});});
+  document.addEventListener('visibilitychange',function(){if(!document.hidden&&audio.paused&&!userPaused)play();});
+  mBtn.addEventListener('click',function(e){e.stopPropagation();if(audio.paused){userPaused=false;play();}else{userPaused=true;audio.pause();mBtn.classList.add('muted');}});
+
+  /* open sequence: crack, seal falls, doors swing open, satin, then the photo */
+  body.classList.add('locked','staging');
+  var opened=false;
+  function open(){
+    if(opened) return; opened=true;
+    if(audio.paused) play();
+    var k=reduce?0:1;
+    function at(ms,fn){setTimeout(fn,ms*k);}
+    env.classList.add('crack');
+    at(950,function(){env.classList.add('split');});
+    at(1300,function(){env.classList.add('fall');});
+    at(2000,function(){env.classList.add('open');body.classList.add('opened');});
+    at(4800,function(){reveal(document.querySelectorAll('.hero .rv'));});
+    at(6300,function(){env.hidden=true;body.classList.remove('locked');watch();});
+  }
+  env.addEventListener('click',open);
+
+  function reveal(list){Array.prototype.forEach.call(list,function(el,i){setTimeout(function(){el.classList.add('in');},i*450);});}
+  function watch(){
+    var els=document.querySelectorAll('.fa .rv');
+    if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in');});return;}
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.2});
+    els.forEach(function(e){io.observe(e);});
+  }
+  /* tap to move on to the next part */
+  var steps=[document.querySelector('.hero')].concat(Array.prototype.slice.call(document.querySelectorAll('.fa > *')));
+  document.querySelector('.content').addEventListener('click',function(e){
+    if(!body.classList.contains('opened')||e.target.closest('a,button')) return;
+    var mid=scrollY+innerHeight/2, next=null;
+    for(var i=0;i<steps.length;i++){var r=steps[i].getBoundingClientRect(),c=scrollY+r.top+r.height/2;if(c>mid+40){next=steps[i];break;}}
+    if(next){next.classList.add('in');next.scrollIntoView({behavior:reduce?'auto':'smooth',block:'center'});}
+  });
+  addEventListener('scroll',function(){body.classList.toggle('scrolled',scrollY>innerHeight*.4);},{passive:true});
+
+  /* countdown */
+  var fa=function(n){return String(n).replace(/\d/g,function(d){return '۰۱۲۳۴۵۶۷۸۹'[d];});};
+  var target=new Date('2026-10-22T19:00:00+03:30').getTime();
+  var ids=['d','h','m','s'].map(function(k){return document.getElementById('cd-'+k);});
+  function tick(){var t=Math.max(0,target-Date.now());[Math.floor(t/864e5),Math.floor(t/36e5)%24,Math.floor(t/6e4)%60,Math.floor(t/1e3)%60].forEach(function(x,i){ids[i].textContent=fa(x);});}
+  tick(); setInterval(tick,1000);
+})();
+</script>
+
+</body>
+</html>
