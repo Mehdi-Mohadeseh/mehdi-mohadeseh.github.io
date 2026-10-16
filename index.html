@@ -131,6 +131,11 @@ body.opened .vline{transform:scaleY(1)}
 .route{display:inline-flex;align-items:center;gap:8px;margin-top:10px;min-height:44px;padding:9px 22px;border:1px solid var(--glass-line);border-radius:14px;color:var(--white);text-decoration:none;font-weight:500;font-size:14px;background:var(--glass);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
 .route:focus-visible{outline:2px solid var(--white);outline-offset:3px}
 .route:hover{background:rgba(255,255,255,.22)}
+.maps{display:flex;justify-content:center;gap:34px;margin-top:16px}
+.mapapp{display:flex;flex-direction:column;align-items:center;gap:6px;color:var(--white);text-decoration:none;font-size:14px;font-weight:500}
+.mapapp .ic{width:62px;height:62px;border-radius:18px;background:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 18px rgba(0,0,0,.28);transition:transform .2s ease}
+.mapapp:hover .ic,.mapapp:active .ic{transform:translateY(-2px) scale(1.04)}
+.mapapp:focus-visible{outline:2px solid var(--white);outline-offset:4px;border-radius:12px}
 .count{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;width:100%;max-width:330px}
 .count div{display:flex;flex-direction:column;align-items:center;padding:8px 0 4px;border-radius:14px;background:var(--glass);border:1px solid var(--glass-line);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
 .count b{font-size:22px;font-weight:500;line-height:1.4;font-variant-numeric:tabular-nums}
@@ -222,10 +227,16 @@ body.staging .rv.in{opacity:1;transform:none;filter:none}
     <div class="blk rv">
       <div class="venue">هتل سایه‌بان کویر</div>
       <p class="addr">اردستان، بلوار معلم، بعد از بلوار ولیعصر</p>
-      <a class="route" href="https://nshn.ir/23_bSjPnyFZRQz">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
-        مسیریابی با نشان
-      </a>
+      <div class="maps" aria-label="مسیریابی">
+        <a class="mapapp" href="https://nshn.ir/23_bSjPnyFZRQz" aria-label="مسیریابی با نشان">
+          <span class="ic"><svg width="30" height="30" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s-7.5-6.6-7.5-12.2a7.5 7.5 0 0 1 15 0C19.5 15.4 12 22 12 22z" fill="#1C9AA0"/><circle cx="12" cy="9.8" r="3" fill="#fff"/></svg></span>
+          <span class="lb">نشان</span>
+        </a>
+        <a class="mapapp" href="https://maps.app.goo.gl/cQPkWDfoj5BChaYt9" aria-label="مسیریابی با گوگل مپ">
+          <span class="ic"><svg width="30" height="30" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6.5l6-2.5 6 2.5 6-2.5v13.5l-6 2.5-6-2.5-6 2.5z" fill="#E9EEF2"/><path d="M9 4v13.5M15 6.5V20" stroke="#B9C3CC" stroke-width="1"/><path d="M15 3.2c-2.2 0-4 1.7-4 3.9 0 2.9 4 7.2 4 7.2s4-4.3 4-7.2c0-2.2-1.8-3.9-4-3.9z" fill="#D9473A"/><circle cx="15" cy="7.1" r="1.5" fill="#fff"/></svg></span>
+          <span class="lb">گوگل مپ</span>
+        </a>
+      </div>
     </div>
 
     <div class="count rv" aria-label="شمارش معکوس تا مراسم">
@@ -234,8 +245,6 @@ body.staging .rv.in{opacity:1;transform:none;filter:none}
       <div><b id="cd-m">۰</b><small>دقیقه</small></div>
       <div><b id="cd-s">۰</b><small>ثانیه</small></div>
     </div>
-
-    <a class="qr rv" href="https://nshn.ir/23_bSjPnyFZRQz"><span><img src="qr.svg" alt="QR کد آدرس هتل سایه‌بان کویر"></span>آدرس</a>
 
     <p class="wait rv">منتظرتان هستیم</p>
   </main>
