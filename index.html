@@ -90,8 +90,12 @@ body.locked{overflow:hidden}
 /* ---------- fixed photo ---------- */
 .photo{position:fixed;top:0;left:0;right:0;height:100vh;height:100lvh;z-index:0;overflow:hidden;transform:translateZ(0);-webkit-backface-visibility:hidden;backface-visibility:hidden;pointer-events:none}
 .photo img{width:100%;height:100%;object-fit:cover;object-position:50% 18%}
-.photo::after{content:"";position:absolute;inset:0;background:rgba(10,6,8,.85);transition:background 3.6s ease}
-body.opened .photo::after{background:rgba(22,15,19,.52)}
+/* first page: photo bright, a soft shade only behind the names; after it: one even dark shade */
+.photo::before{content:"";position:absolute;inset:0;background:linear-gradient(to bottom,rgba(22,15,19,.06),rgba(22,15,19,.06) 45%,rgba(22,15,19,.5));opacity:0;transition:opacity 3s ease}
+.photo::after{content:"";position:absolute;inset:0;background:rgba(18,12,15,.58);opacity:1;transition:opacity 3s ease}
+body.opened .photo::before{opacity:1}
+body.opened .photo::after{opacity:0}
+body.opened.past .photo::after{opacity:1;transition:opacity 1.1s ease}
 .vline{position:fixed;z-index:2;top:14vh;top:14svh;height:72vh;height:72svh;right:calc(18px + env(safe-area-inset-right,0px));width:1px;background:rgba(255,255,255,.75);transform:scaleY(0);transform-origin:top;transition:transform 1.6s ease 1s}
 body.opened .vline{transform:scaleY(1)}
 
@@ -143,7 +147,7 @@ body.staging .rv{opacity:0;transform:translateY(16px);filter:blur(6px)}
 body.staging .rv.in{opacity:1;transform:none;filter:none}
 
 @media (prefers-reduced-motion:reduce){
-  .door,.tflap,.liner,.half,.photo img,.photo::after,.vline,.rv,.env.gone{transition:none}
+  .door,.tflap,.liner,.half,.photo img,.photo::before,.photo::after,.vline,.rv,.env.gone{transition:none}
   .seal,.music svg.on,.sparkles i{animation:none}
   body.staging .rv{opacity:1;transform:none;filter:none}
 }
@@ -233,7 +237,7 @@ body.staging .rv.in{opacity:1;transform:none;filter:none}
 
     <a class="qr rv" href="https://nshn.ir/23_bSjPnyFZRQz"><span><img src="qr.svg" alt="QR کد آدرس هتل سایه‌بان کویر"></span>آدرس</a>
 
-    <p class="wait rv">منتظرتون هستیم</p>
+    <p class="wait rv">منتظرتان هستیم</p>
   </main>
 </div>
 
@@ -283,6 +287,9 @@ body.staging .rv.in{opacity:1;transform:none;filter:none}
     els.forEach(function(e){io.observe(e);});
   }
   /* tap to move on to the next part */
+  /* darken the photo once the first page is left behind; bright again back at the top */
+  function shade(){body.classList.toggle('past',scrollY>innerHeight*.35);}
+  addEventListener('scroll',shade,{passive:true}); shade();
   var steps=[document.querySelector('.hero')].concat(Array.prototype.slice.call(document.querySelectorAll('.fa > *')));
   document.querySelector('.content').addEventListener('click',function(e){
     if(!body.classList.contains('opened')||e.target.closest('a,button')) return;
